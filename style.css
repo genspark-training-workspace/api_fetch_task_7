@@ -1,0 +1,104 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f4f4;
+    /* color: #000000; */
+    margin: 2rem;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title{
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.search-page-bar {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    padding: 8px 16px;
+    border-radius: 12px;
+    border: 1px solid #c9c9c9;
+    box-shadow: 0 2px 4px rgba(111, 111, 111, 0.1);
+    margin: 0 auto;
+}
+
+.search-page-bar .form-control {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    flex-grow: 1;
+    padding: 8px;
+    font-size: 1rem;
+}
+
+.search-page-bar .form-control::placeholder {
+    color: #8e8e8e;
+    font-size: 1rem;
+}
+
+.search-page-bar .search-icon {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.search-page-bar .search-icon svg {
+    width: 20px;
+    height: 20px;
+    color: #555;
+}
+
+
+#character-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+    justify-items: center;
+}
+
+.character-card {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    padding: 0.8rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: box-shadow 0.2s ease;
+}
+
+.character-card:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#character-container img {
+    border-radius: 0.5rem;
+    width: 100%;
+    height: auto;
+}
+
+.character-name {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0;
+    color: #474747;
+    /* margin: 0.5rem 0 1rem 0; */
+}
+
