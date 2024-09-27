@@ -42,9 +42,12 @@ function fetchCharacters(query) {
 
 function displayCharacters(characters) {
     const characterContainer = document.getElementById('character-container')
-    characterContainer.innerHTML = ''
+    characterContainer.innerHTML = '' // Clear previous results
+
     if (characters.length === 0) {
-        characterContainer.innerHTML = '<p>No characters found</p>'
+        const noResultMessage = document.createElement('p')
+        noResultMessage.textContent = 'No characters found'
+        characterContainer.appendChild(noResultMessage)
         return
     }
 
@@ -52,11 +55,18 @@ function displayCharacters(characters) {
         const characterCard = document.createElement('div')
         characterCard.classList.add('character-card')
 
-        characterCard.innerHTML = `
-            <img src="${character.image}" alt="${character.name}" />
-            <p class='character-name'>${character.name}</p>
-        `
+        const characterImage = document.createElement('img')
+        characterImage.src = character.image
+        characterImage.alt = character.name
+
+        const characterName = document.createElement('p')
+        characterName.classList.add('character-name')
+        characterName.textContent = character.name
+
+        characterCard.appendChild(characterImage)
+        characterCard.appendChild(characterName)
 
         characterContainer.appendChild(characterCard)
     })
 }
+
